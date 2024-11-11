@@ -378,3 +378,515 @@
         </div>
     </body>
 </html>
+
+<style>
+    /* Адаптив для мобильных устройств  */
+    @media (max-width: 500px) {
+        /* Чтобы страница не скроллилась вбок */
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Главный контейнер */
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Кнопки и ссылки в меню */
+        nav ul li button,
+        nav ul li a {
+            width: 100%;
+            text-align: center;
+            display: block;
+            margin-left: 10%;
+        }
+
+        /* Главный заголовок */
+        h1 {
+            font-size: 25px !important;
+            margin-left: 5%;
+        }
+
+        /* Все ссылки на странице */
+        a {
+            font-size: 15px !important;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        /* Все картинки на странице */
+        img {
+            margin-left: 5%;
+        }
+
+        /* Блок с вопросом "есть ли бизнес" */
+        .relative {
+            padding: 0 16px;
+        }
+
+        /* Контейнер внутри секции с вопросом "есть ли бизнес" */
+        .relative .container {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        /* Заголовок вопроса */
+        .relative h2 {
+            font-size: 22px !important;
+            line-height: 1.4;
+            padding: 0 10px;
+        }
+
+        /* Убираем перенос строки */
+        .relative h2 br {
+            display: none;
+        }
+
+        /* Кнопки Да/Нет */
+        .relative .mt-\[39px\] {
+            margin-top: 30px;
+            display: flex;
+            gap: 12px;
+            padding: 0 10px;
+        }
+
+        /* Стили для кнопок Да/Нет */
+        .relative button {
+            width: 100% !important;
+            height: 50px !important;
+            font-size: 16px !important;
+            text-align: center !important;
+            padding: 0 15px !important;
+        }
+
+        /* Фоновая картинка */
+        .relative .absolute {
+            width: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        /* Настройка фонового изображения для секции с вопросами */
+        .relative .absolute img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0;
+        }
+
+        /* Блок с цифрами */
+        .mt-\[159px\] {
+            margin-top: 80px !important;
+        }
+
+        /* Добавляем отступы по бокам для контейнера в блоке с цифрами на мобильных устройствах */
+        .mt-\[159px\] .container {
+            padding: 0 16px;
+        }
+
+        /* Заголовок блока с цифрами */
+        .mt-\[159px\] h2 {
+            font-size: 28px !important;
+            gap: 8px;
+        }
+
+        /* Маленькие ромбики в заголовках */
+        .mt-\[159px\] h2 img,
+        .mt-\[240px\] h2 img {
+            width: 8px;
+            height: 8px;
+            margin-top: 8px !important;
+            margin-left: 0;
+        }
+
+        /* Блоки с цифрами в столбик */
+        .mt-\[159px\] .grid {
+            display: grid;
+            grid-template-columns: 1fr !important;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        /* Картинки в блоках */
+        .mt-\[159px\] .grid img {
+            width: 120px;
+            height: 110px;
+        }
+
+        /* Большие цифры */
+        .mt-\[159px\] .grid .text-\[50px\] {
+            font-size: 40px !important;
+            margin-top: 16px;
+        }
+
+        /* Текст под цифрами */
+        .mt-\[159px\] .grid .text-\[20px\] {
+            font-size: 18px !important;
+            margin-top: 8px;
+        }
+
+        /* Блок с историями */
+        .mt-\[240px\] {
+            margin-top: 80px !important;
+            padding: 0 16px;
+        }
+
+        /* Заголовок историй */
+        .mt-\[240px\] h2 {
+            font-size: 28px !important;
+            margin-bottom: 40px !important;
+        }
+
+        /* Все истории в столбик */
+        .mt-\[240px\] .space-y-\[100px\] {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 10px !important;
+        }
+
+        /* Одна история */
+        .mt-\[240px\] article {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 10px !important;
+            padding: 0 16px;
+        }
+
+        /* Логотипы историй */
+        .mt-\[240px\] article img[src*='logo'],
+        .mt-\[240px\] article img[src*='woman'] {
+            width: 250px !important;
+            margin: 0 auto !important;
+        }
+
+        /* Название истории */
+        .mt-\[240px\] article h3 {
+            font-size: 20px !important;
+            margin-bottom: 16px !important;
+            text-align: center;
+        }
+
+        /* Весь текст в историях */
+        .mt-\[240px\] article p {
+            font-size: 18px !important;
+            margin-bottom: 16px !important;
+        }
+
+        /* Кнопка Читать историю */
+        .mt-\[240px\] article button {
+            width: 100% !important;
+            height: 45px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            font-size: 14px !important;
+        }
+
+        /* Стрелочка в кнопке */
+        .mt-\[240px\] article button img {
+            width: 16px !important;
+            height: 9px !important;
+        }
+
+        /* Подвал */
+        footer nav {
+            width: 100% !important;
+            padding: 24px 16px !important;
+        }
+
+        /* Все ссылки в подвале в столбик */
+        footer .flex {
+            flex-direction: column !important;
+            gap: 24px !important;
+        }
+
+        /* Список ссылок в футере для мобильной версии - отображаем вертикально с отступами */
+        footer ul {
+            flex-direction: column !important;
+            gap: 16px !important;
+        }
+
+        /* Ссылки в подвале */
+        footer a {
+            font-size: 14px !important;
+            margin: 0 !important;
+        }
+
+        /* Секция "Есть вопросы" - заголовок и текст */
+        section.relative.mt-\[176\.44px\] h2 {
+            padding-top: 40px !important;
+        }
+
+        /* Отступ для параграфа в секции "Есть вопросы?" на мобильных устройствах */
+        section.relative.mt-\[176\.44px\] p {
+            margin-top: 40px !important;
+        }
+    }
+
+    /* Адаптив для планшетов от 501px до 1024px */
+    @media (min-width: 501px) and (max-width: 1024px) {
+        /* Основной контейнер - ограничиваем максимальную ширину и добавляем отступы по бокам */
+        .container {
+            width: 100%;
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* Шапка сайта - уменьшаем высоту и настраиваем фоновое изображение */
+        header {
+            min-height: auto;
+            padding: 24px 0 80px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Сброс отступов у навигации */
+        nav {
+            padding: 0;
+        }
+
+        /* Контейнер навигации - выравниваем элементы в строку с отступами */
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        /* Кнопка "Личный кабинет" - задаем фиксированные размеры */
+        nav ul li button {
+            width: 160px;
+            height: 42px;
+            font-size: 15px;
+        }
+
+        /* Ссылки в навигации - устанавливаем размер шрифта */
+        nav ul li a {
+            font-size: 15px !important;
+        }
+
+        /* Главный заголовок - настраиваем типографику и отступы */
+        h1 {
+            font-size: 32px !important;
+            line-height: 1.3;
+            margin-top: 40px;
+        }
+
+        /* Убираем переносы строк в заголовке для планшетов */
+        h1 br {
+            display: none;
+        }
+
+        /* Секция с вопросом о бизнесе - позиционирование относительно предыдущего блока */
+        .relative {
+            position: relative;
+            margin-top: -40px; /* Отрицательный отступ для наложения на предыдущую секцию */
+        }
+
+        /* Контейнер секции с вопросом - внутренние отступы */
+        .relative .container {
+            padding: 60px 32px;
+        }
+
+        /* Заголовок вопроса - настройка размеров и выравнивания */
+        .relative h2 {
+            font-size: 28px !important;
+            line-height: 1.3;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Убираем переносы строк в заголовке вопроса */
+        .relative h2 br {
+            display: none;
+        }
+
+        /* Контейнер с кнопками Да/Нет - выравнивание и отступы */
+        .relative .mt-\[39px\] {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        /* Кнопки Да/Нет - настройка размеров */
+        .relative button {
+            width: 280px !important;
+            height: 48px !important;
+            font-size: 16px !important;
+            padding: 0 !important;
+        }
+
+        /* Секция с цифрами - отступ от предыдущей секции */
+        .mt-\[159px\] {
+            margin-top: 80px !important;
+        }
+
+        /* Заголовок секции с цифрами - настройка размеров и выравнивания */
+        .mt-\[159px\] h2 {
+            font-size: 32px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        /* Сетка для блоков с цифрами - 3 колонки */
+        .mt-\[159px\] .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        /* Отдельный блок с цифрой - выравнивание содержимого */
+        .mt-\[159px\] .grid > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Изображения в блоках с цифрами */
+        .mt-\[159px\] .grid img {
+            width: 130px;
+            height: 120px;
+            object-fit: contain;
+        }
+
+        /* Большие цифры в блоках */
+        .mt-\[159px\] .grid .text-\[50px\] {
+            font-size: 38px !important;
+            margin: 16px 0 8px;
+        }
+
+        /* Подписи под цифрами */
+        .mt-\[159px\] .grid .text-\[20px\] {
+            font-size: 16px !important;
+            line-height: 1.4;
+        }
+
+        /* Секция с историями успеха - отступ сверху */
+        .mt-\[240px\] {
+            margin-top: 100px !important;
+        }
+
+        /* Заголовок историй успеха */
+        .mt-\[240px\] h2 {
+            font-size: 32px !important;
+            margin-bottom: 48px !important;
+        }
+
+        /* Контейнер для всех историй - вертикальное расположение */
+        .mt-\[240px\] .space-y-\[100px\] {
+            display: flex;
+            flex-direction: column;
+            gap: 48px !important;
+        }
+
+        /* Карточка отдельной истории - оформление и тени */
+        .mt-\[240px\] article {
+            display: flex;
+            align-items: flex-start;
+            gap: 32px;
+            padding: 24px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Четные истории - реверс расположения элементов */
+        .mt-\[240px\] article:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* Изображения в историях успеха */
+        .mt-\[240px\] article img[src*='logo'],
+        .mt-\[240px\] article img[src*='woman'] {
+            width: 180px !important;
+            flex-shrink: 0;
+        }
+
+        /* Заголовки историй */
+        .mt-\[240px\] article h3 {
+            font-size: 24px !important;
+            margin-bottom: 16px !important;
+        }
+
+        /* Текст историй */
+        .mt-\[240px\] article p {
+            font-size: 15px !important;
+            line-height: 1.5;
+            margin-bottom: 20px !important;
+        }
+
+        /* Кнопки в историях */
+        .mt-\[240px\] article button {
+            width: 180px !important;
+            height: 42px !important;
+        }
+
+        /* Секция "Есть вопросы" - позиционирование и фон */
+        section.relative.mt-\[176\.44px\] {
+            margin-top: 100px !important;
+            padding: 60px 0;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Заголовок секции вопросов */
+        section.relative.mt-\[176\.44px\] h2 {
+            font-size: 32px !important;
+            margin-bottom: 16px;
+        }
+
+        /* Текст секции вопросов */
+        section.relative.mt-\[176\.44px\] p {
+            font-size: 16px !important;
+            margin-bottom: 32px;
+        }
+
+        /* Кнопка в секции вопросов */
+        section.relative.mt-\[176\.44px\] button {
+            width: 240px !important;
+            height: 48px !important;
+            font-size: 16px !important;
+        }
+
+        /* Подвал сайта - отступы */
+        footer {
+            padding: 48px 0;
+        }
+
+        /* Навигация в подвале */
+        footer nav {
+            padding: 0 32px !important;
+        }
+
+        /* Контейнер для элементов подвала - расположение и отступы */
+        footer .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+
+        /* Список ссылок в подвале */
+        footer ul {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        /* Ссылки в подвале */
+        footer a {
+            font-size: 15px !important;
+            white-space: nowrap; /* Предотвращает перенос текста ссылок */
+        }
+</style>
