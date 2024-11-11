@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Мой бизнес</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            // Загружаем конфигурацию tailwindcss
+            fetch('./tailwind.config.js')
+                .then((response) => response.text())
+                .then((text) => eval(text));
+        </script>
+    </head>
+    <body class="antialiased">
+        <div class="container max-w-[1920px] mx-auto">
+            <!-- Header -->
+            <header class="min-h-screen bg-[url('./img/bg-city.png')] bg-cover bg-no-repeat">
+                <div class="container max-w-[1111px] mx-auto pt-[35px]">
+                    <nav>
+                        <ul class="flex items-center">
+                            <li class="mr-[27.51px]">
+                                <button
+                                    class="w-[171.49px] h-[37.96px] bg-secondary hover:bg-secondary-hover rounded-[50px] text-white text-[16px] font-[400] transition-colors"
+                                >
+                                    Личный кабинет
+                                </button>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-base font-[700] hover:text-primary transition-colors text-[16px]"
+                                >
+                                    Каталог услуг
+                                </a>
+                            </li>
+                            <li class="ml-auto flex items-center gap-2">
+                                <img
+                                    src="./img/logo online assistant.svg"
+                                    alt="Помощник"
+                                    class="w-[38px] h-[38px] mr-[5px]"
+                                />
+                                <a
+                                    href="#"
+                                    class="text-secondary hover:text-secondary-hover font-[700] transition-colors text-[16px]"
+                                >
+                                    Онлайн помощник
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="mt-[63.04px]">
+                        <img src="./img/logo.svg" alt="Мой бизнес" />
+                        <h1 class="mt-[63.04px] text-[35px] font-[700] text-dark leading-[122.4%]">
+                            Мой бизнес - цифровая платформа<br />
+                            для тех, кто хочет открыть и <br />
+                            развивать свой бизнес
+                        </h1>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <!-- Бизнес вопросы -->
+                <section class="relative">
+                    <div class="absolute inset-0 mx-auto">
+                        <img
+                            src="./img/bg-city-lower-part.png"
+                            alt="bg-city-lower-part"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div
+                        class="container max-w-[1111px] mx-auto relative z-10 pt-[85px] pb-[223px]"
+                    >
+                        <h2
+                            class="mx-auto text-[30px] font-[700] text-dark text-center leading-[117.4%]"
+                        >
+                            Для начала работы ответьте на вопрос,<br />
+                            есть ли у вас уже существующий бизнес?
+                        </h2>
+                        <div class="mt-[39px] flex justify-center gap-[26.82px]">
+                            <button
+                                class="w-[377.09px] h-[54px] bg-secondary hover:bg-secondary-hover rounded-[50px] text-white text-[22px] font-[400] transition-colors"
+                            >
+                                Да, у меня уже есть бизнес
+                            </button>
+                            <button
+                                class="w-[402.33px] h-[54px] bg-primary hover:bg-primary-hover rounded-[50px] text-white text-[22px] font-[400] transition-colors"
+                            >
+                                Нет, но планирую открыть
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Преимущества -->
+                <section class="mt-[159px]">
+                    <div class="container max-w-[919px] mx-auto">
+                        <h2 class="flex items-center justify-center gap-3 text-[40px] font-[700]">
+                            <img src="./img/diamond.svg" alt="" class="w-3 h-3 mt-2" />
+                            Преимущества
+                            <img src="./img/diamond.svg" alt="" class="w-3 h-3 mt-3" />
+                        </h2>
+
+                        <div class="grid grid-cols-3 mt-[72px]">
+                            <div class="text-center">
+                                <img
+                                    src="./img/house.svg"
+                                    alt="Дом"
+                                    class="mx-auto w-[178.11px] h-[164.6px]"
+                                />
+                                <p class="text-[50px] font-[700] text-primary mt-auto">482</p>
+                                <p class="text-[20px] font-[700] leading-[122.4%] mt-auto">
+                                    Организаций поддержки<br />по Российской Федерации
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <img
+                                    src="./img/phones.svg"
+                                    alt=""
+                                    class="mx-auto w-[178.11px] h-[164.6px]"
+                                />
+                                <p class="text-[50px] font-[700] text-primary mt-auto">5240</p>
+                                <p class="text-[20px] font-[700] leading-[122.4%] mt-auto">
+                                    Оказано услуг<br />государственной поддержки
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <img
+                                    src="./img/people.svg"
+                                    alt=""
+                                    class="mx-auto w-[178.11px] h-[164.6px]"
+                                />
+                                <p class="text-[50px] font-[700] text-primary mt-auto">1360</p>
+                                <p class="text-[20px] font-[700] leading-[122.4%] mt-auto">
+                                    Зарегистрировано<br />участников проекта
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Истории успеха -->
+                <section class="mt-[240px]">
+                    <div class="container max-w-[1100px] mx-auto">
+                        <h2
+                            class="flex items-center justify-center gap-3 text-[40px] font-[700] leading-[122.4%] mb-[89.42px]"
+                        >
+                            <img src="./img/diamond.svg" alt="" class="w-3 h-3 mt-2" />
+                            Истории успеха
+                            <img src="./img/diamond.svg" alt="" class="w-3 h-3 mt-3" />
+                        </h2>
+
+                        <div class="space-y-[100px]">
+                            <!-- История 1 -->
+                            <article class="flex items-start gap-[107.86px]">
+                                <img
+                                    src="./img/bakery-Russian-traditions-logo.svg"
+                                    alt=""
+                                    class="flex-shrink-0 mt-[-40px]"
+                                />
+                                <div class="flex-grow">
+                                    <h3
+                                        class="text-[24px] font-[700] text-dark mb-[22px] leading-[95.9%]"
+                                    >
+                                        Пекарня "Русские традиции"
+                                    </h3>
+                                    <div class="flex items-center">
+                                        <img
+                                            src="./img/marker.svg"
+                                            alt=""
+                                            class="flex-shrink-0 mr-[19.33px] mt-[-10px]"
+                                        />
+                                        <p class="text-secondary font-[700] mb-[15px] text-[16px]">
+                                            Как говорит сам Владимир: «мне хотелось, чтобы все
+                                            узнали, что <br />
+                                            такое русская кухня», «обьяснить, что она жива».
+                                        </p>
+                                    </div>
+                                    <p class="mb-[17px] font-[400] text-[16px]">
+                                        Чтобы мини-пекарня стала рентабельным бизнесом, необходимы
+                                        строгие <br />
+                                        расчеты, учет рисков и перспектив, анализ рынка, налаживание
+                                        сбыта.
+                                    </p>
+                                    <button
+                                        class="w-[177px] h-[39px] bg-primary hover:bg-primary-hover rounded-[50px] text-white flex items-center justify-center gap-2 transition-colors text-[14px] font-[400]"
+                                    >
+                                        <span>Читать историю</span>
+                                        <img
+                                            src="./img/arrow.svg"
+                                            alt=""
+                                            class="filter brightness-0 invert w-[16px] h-[8.64px] mt-[3px]"
+                                        />
+                                    </button>
+                                </div>
+                            </article>
+
+                            <!-- История 2 -->
+                            <article class="flex flex-row-reverse items-start gap-8">
+                                <img
+                                    src="./img/auto-repair-shop-logo.svg"
+                                    alt=""
+                                    class="flex-shrink-0 mt-[-40px]"
+                                />
+                                <div class="flex-grow max-w-[600px]">
+                                    <h3 class="text-[24px] font-[700] text-dark mb-[22px]">
+                                        Автомастерская
+                                    </h3>
+                                    <div class="flex">
+                                        <img
+                                            src="./img/marker.svg"
+                                            alt=""
+                                            class="mr-[18.09px] flex-shrink-0 mt-[-10px]"
+                                        />
+                                        <p
+                                            class="text-secondary font-[700] mb-[15.42px] text-[16px]"
+                                        >
+                                            Первые дни независимости. Когда не нужно рано вставать,
+                                            когда не нужно отпрашиваться, что бы успеть съездить в
+                                            магазин, когда удобно.
+                                        </p>
+                                    </div>
+                                    <p class="mb-[22px] text-[16px] leading-[115.4%] font-[400]">
+                                        Встреча в городе Н с моими будущими партнерами была
+                                        плодотворной. Я не смог заснуть до пяти утра – не потому что
+                                        не спалось, но потому что мысли о будущих перспективах
+                                        просто взрывали мой мозг.
+                                    </p>
+                                    <button
+                                        class="w-[177px] h-[39px] bg-primary hover:bg-primary-hover rounded-[50px] text-white flex items-center justify-center gap-2 transition-colors text-[14px] font-[400]"
+                                    >
+                                        <span>Читать историю</span>
+                                        <img
+                                            src="./img/arrow.svg"
+                                            alt=""
+                                            class="filter brightness-0 invert w-[16px] h-[8.64px] mt-[3px]"
+                                        />
+                                    </button>
+                                </div>
+                            </article>
+
+                            <!-- История 3 -->
+                            <article class="flex items-start">
+                                <img
+                                    src="./img/woman.svg"
+                                    alt=""
+                                    class="flex-shrink-0 mt-[-40px]"
+                                />
+                                <div class="flex-grow">
+                                    <h3 class="text-[24px] font-[700] text-dark mb-[22px]">
+                                        Салон красоты "Эмират"
+                                    </h3>
+                                    <div class="flex">
+                                        <img
+                                            src="./img/marker.svg"
+                                            alt=""
+                                            class="mr-[19.33px] flex-shrink-0 mt-[-80px]"
+                                        />
+                                        <p
+                                            class="text-secondary font-[700] mb-[15.42px] mb-[88px] text-[16px]"
+                                        >
+                                            Когда же появилась возможность открыть свой бизнес, я
+                                            рассматривала <br />
+                                            различные варианты, изучала всевозможные направления.
+                                        </p>
+                                    </div>
+
+                                    <button
+                                        class="w-[177px] h-[39px] bg-primary hover:bg-primary-hover rounded-[50px] text-white flex items-center justify-center gap-2 transition-colors text-[14px] font-[400]"
+                                    >
+                                        <span>Читать историю</span>
+                                        <img
+                                            src="./img/arrow.svg"
+                                            alt=""
+                                            class="filter brightness-0 invert w-[16px] h-[8.64px] mt-[3px]"
+                                        />
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Вопросы -->
+                <section class="relative mt-[176.44px] w-full h-[300px]">
+                    <div class="absolute inset-0 z-[-1]">
+                        <img
+                            src="./img/bg-questions-lower-part.png"
+                            alt=""
+                            class="w-full h-full object-cove"
+                        />
+                    </div>
+                    <div class="text-center">
+                        <h2 class="text-[35px] font-[700] pt-[48px]">Есть вопросы?</h2>
+                        <p class="mt-[7px] mb-[29px] text-base font-[400] text-[16px]">
+                            Задайте интересующие вас вопросы<br />онлайн помощнику
+                        </p>
+                        <button
+                            class="mt-7 mb-[72.14px] w-[263.6px] h-[43.86px] bg-secondary hover:bg-secondary-hover rounded-[50px] text-white font-[700] text-[16px] flex items-center justify-center gap-2 mx-auto transition-colors"
+                        >
+                            <img src="./img/icon-online assistant.svg" alt="" />
+                            <span>Онлайн помощник</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="bg-dark">
+                    <nav class="container mx-auto py-[40px] w-[1126.31px]">
+                        <div class="flex justify-between">
+                            <!-- Левая группа ссылок -->
+                            <div>
+                                <ul class="flex gap-5">
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="text-white text-[16px] font-[700] hover:text-gray-300 transition-colors"
+                                        >
+                                            Услуги и поддержка
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="text-white text-[16px] font-[700] hover:text-gray-300 transition-colors"
+                                        >
+                                            Сервисы для бизнеса
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="text-white text-[16px] font-[700] hover:text-gray-300 transition-colors"
+                                        >
+                                            Общая информация
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="text-white text-[16px] font-[700] hover:text-gray-300 transition-colors"
+                                        >
+                                            Защита бизнеса
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Правая группа контактов -->
+                            <div class="ml-auto">
+                                <ul class="flex gap-8">
+                                    <li>
+                                        <a
+                                            href="mailto:service@in-line.ru"
+                                            class="text-white text-[16px] font-[700] hover:text-gray-300 transition-colors"
+                                        >
+                                            service@in-line.ru
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="tel:88002007430"
+                                            class="text-white text-[16px] font-[700] hover:text-gray-300 transition-colors"
+                                        >
+                                            8-800-200-74-30
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </footer>
+            </main>
+        </div>
+    </body>
+</html>
